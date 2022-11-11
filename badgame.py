@@ -8,7 +8,7 @@ while guessesRemaining > 0 :
     input_str = input()
     input1 = int(input_str)
     if (input1 == value):
-        msg = "yay"
+        msg = "yay!!!"
         print(msg)
         break
 
