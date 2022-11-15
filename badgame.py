@@ -1,5 +1,11 @@
 import random
 
+def wrongGuess(msg, guessesRemaining):
+    print (msg)
+    guessesRemaining -= 1
+    print ("guesses remaining " + str(guessesRemaining))
+    return guessesRemaining
+
 value = random.randrange(50)
 guessesRemaining = 6
 while guessesRemaining > 0 :
@@ -14,12 +20,8 @@ while guessesRemaining > 0 :
 
     elif (input1 > value):
         msg = "too high"
-        print (msg)
-        guessesRemaining -= 1
-        print ("guesses remaining " + str(guessesRemaining))
+        guessesRemaining = wrongGuess (msg, guessesRemaining)
 
     elif (input1 < value):
         msg = "too low"
-        print (msg)
-        guessesRemaining -= 1
-        print ("guesses remaining " + str(guessesRemaining))
+        guessesRemaining = wrongGuess (msg, guessesRemaining)
